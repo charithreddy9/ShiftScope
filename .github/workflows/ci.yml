@@ -24,3 +24,8 @@ jobs:
           test -s ci-results/report.md
           test -s ci-results/summary.csv
           test -s ci-results/figures/conformal_coverage.png
+      - name: Save reproducible measurements and plots
+        uses: actions/upload-artifact@v4
+        with:
+          name: shiftscope-results
+          path: ci-results/
